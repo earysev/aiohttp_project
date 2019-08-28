@@ -4,11 +4,16 @@ import aiohttp_jinja2
 from . import routes
 
 
-async def create_app(config: dict = None):
+async def async_create_app(config):
+
+    return create_app(config)
+
+
+def create_app(config):
     app = web.Application()
-    if config is None:
-        pass
     app['config'] = config
     aiohttp_jinja2.setup(app, loader=jinja2.PackageLoader('demo', 'templates'))
     routes.setup_routes(app)
     return app
+
+
