@@ -1,6 +1,6 @@
 import argparse
 import aiohttp
-from demo import create_app, async_create_app, load_config, set_config
+from demo import create_app, async_create_app, load_config
 
 
 def main():
