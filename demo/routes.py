@@ -3,4 +3,4 @@ from .views import frontend
 
 
 def setup_routes(app: web.Application):
-    app.router.add_route('GET', '/', frontend.index)
+    app.router.add_route('GET', '/aiohttp/', frontend.index)
